@@ -1,4 +1,6 @@
-#!/usr/bin/with-contenv bashio
+#!/bin/bash
+set -e
 
-echo Hello world!
-python3 -m http.server 8000
+npm install typescript -g
+npm install
+npm run start

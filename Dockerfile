@@ -3,12 +3,11 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-# Install requirements for add-on
-RUN apk add --no-cache python3
+ADD package.json /
 
-# Python 3 HTTP Server serves the current working dir
-# So let's set it to our add-on persistent data directory.
-WORKDIR /data
+RUN apk add --no-cache nodejs-npm jq && \
+npm install gulp -g && \
+npm install
 
 # Copy data for add-on
 COPY run.sh /
