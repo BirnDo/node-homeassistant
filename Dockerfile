@@ -4,12 +4,17 @@ ENV LANG C.UTF-8
 
 ADD package.json /
 
-RUN apk add --no-cache nodejs-npm jq && \
-npm install gulp -g && \
-npm install
-
 # Copy data for add-on
 COPY run.sh /
+COPY app.ts /
+COPY routes/index.ts /routes/
+COPY API-service.ts /
+COPY tsconfig.json /
+COPY package.json /
+COPY package-lock.json /
+
+EXPOSE 3000
+
 RUN chmod a+x /run.sh
 
-CMD [ "/run.sh" ]
+ENTRYPOINT ["sh","/run.sh"]
