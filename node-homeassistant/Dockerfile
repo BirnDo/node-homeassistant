@@ -20,5 +20,4 @@ RUN npm install typescript -g
 RUN npm install
 RUN tsc
 
-
 ENTRYPOINT ["npm", "run", "start"]
