@@ -18,5 +18,6 @@ EXPOSE 3000
 
 RUN npm install typescript -g
 RUN npm install
+RUN tsc
 
 CMD ["npm", "run", "start"]

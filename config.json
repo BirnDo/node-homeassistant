@@ -1,6 +1,6 @@
 {
   "name": "NodeJS",
-  "version": "0.5",
+  "version": "0.6",
   "slug": "node",
   "description": "A simple NodeJS server",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
