@@ -1,7 +1,7 @@
 {
   "name": "NodeJS",
   "version": "0.5",
-  "slug": "node:alpine",
+  "slug": "node",
   "description": "A simple NodeJS server",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
